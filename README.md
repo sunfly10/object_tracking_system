@@ -1,6 +1,7 @@
 # object_tracking_system(25년 7~8월)
 <img width="162" height="144" alt="image" src="https://github.com/user-attachments/assets/edea0f8c-947f-4a46-810f-74f92b7f49a7" />
 
+
 1. 서론
 
   본 프로젝트는 단거리 지대공 유도무기인 '천마'의 시선 지령 유도 방식에서 착안하여, 비전 기반의 실시간 객체 추적 시스템을 구현한 개인 프로젝트입니다.
@@ -13,6 +14,7 @@
 
   •하드웨어: PC, Raspberry Pi 5, Arduino mega 2560, Servo Motor(sg-90) 2개, Raspberry Pi Camera
 
+
 2. System Architecture
 
   단일 보드의 연산 리소스 한계를 극복하고 실시간성을 확보하기 위해, 이기종 디바이스 간 역할을 분담한 분산 제어 시스템을 설계했습니다.
@@ -23,7 +25,8 @@
 
   •Arduino (Actuator): 수신된 목표 각도 데이터를 기반으로 서보모터 구동 및 현재 상태 피드백
 
-  3. Key Technologies & Algorithms
+
+3. Key Technologies & Algorithms
 
   •Vision 기반 조건부 타겟 필터링:
 
@@ -49,7 +52,8 @@
 
   양방향 프로토콜 통신: PC와 아두이노 간 ASCII 문자열 기반의 Command/Feedback 프로토콜(예: x:90, receive_x)을 구축하여, 개방 루프의 불확실성을 제거한 폐루프 제어를 구현했습니다.
 
-  4. 결과
+
+4. 결과
 
   목표 객체가 이동할 경우 시스템이 허용 오차 범위 내로 조준선을 재정렬하는 데 걸리는 정착 시간(Settling Time)을 3초 이내로 달성했습니다.
 
@@ -57,7 +61,8 @@
 
   <img width="679" height="708" alt="사진" src="https://github.com/user-attachments/assets/cc7f77fc-83bd-47d5-96ae-1cdc3d7f790a" />
 
-  5. 한계점 및 개선점
+
+5. 한계점 및 개선점
 
   기구학적 한계 극복: 구동 시 발생하는 모터 반작용력으로 인해 정지 상태에서 미세 잔류 진동이 발생했습니다. 향후 3D 프린터로 전용 결합 브라켓을 설계하여 물리적 유격을 제거할 계획입니다.
 
