@@ -2,7 +2,7 @@
 <img width="162" height="144" alt="image" src="https://github.com/user-attachments/assets/edea0f8c-947f-4a46-810f-74f92b7f49a7" />
 
 
-1. 서론
+### 1. 서론
 
   본 프로젝트는 단거리 지대공 유도무기인 '천마'의 시선 지령 유도 방식에서 착안하여, 비전 기반의 실시간 객체 추적 시스템을 구현한 개인 프로젝트입니다.
 
