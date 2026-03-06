@@ -3,9 +3,13 @@
 
 1. 서론
 본 프로젝트는 단거리 지대공 유도무기인 '천마'의 시선 지령 유도 방식에서 착안하여, 비전 기반의 실시간 객체 추적 시스템을 구현한 개인 프로젝트입니다.
+
 탐지/추적 레이더와 유도탄 발사 장치의 메커니즘을 카메라와 2축 서보모터로 재해석하여, 타겟 객체를 화면 중앙(조준선)에 지속적으로 유지하는 자동 추적 시스템을 구축했습니다.
+
 •개발 환경: Ubuntu 22.04, ROS 2 (Humble)
+
 •주요 언어: Python, C++(Arduino)
+
 •하드웨어: PC, Raspberry Pi 5, Arduino mega 2560, Servo Motor(sg-90) 2개, Raspberry Pi Camera
 
 3. System Architecture
