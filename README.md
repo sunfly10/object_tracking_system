@@ -1,4 +1,4 @@
-# 🎯 LOS Object Tracking System: 천마(시선지령유도) 모사 이기종 분산 추적 시스템
+# 🎯 Object Tracking System: 천마(시선지령유도) 모사 이기종 분산 추적 시스템
 
 <img width="162" height="144" alt="image" src="https://github.com/user-attachments/assets/edea0f8c-947f-4a46-810f-74f92b7f49a7" />
 
