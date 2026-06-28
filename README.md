@@ -1,20 +1,21 @@
-# 🎯 Object Tracking System: 천마(시선지령유도) 모사 이기종 분산 추적 시스템
+# 🎯 Object Tracking System: 천마 (시선지령유도) 모사 이기종 분산 추적 시스템
 
 <img width="162" height="144" alt="image" src="https://github.com/user-attachments/assets/edea0f8c-947f-4a46-810f-74f92b7f49a7" />
 
-## 1. 프로젝트 개요 (Introduction)
-본 프로젝트는 단거리 지대공 유도무기인 **'천마'의 시선지령유도(LOS, Line-Of-Sight) 방식에서 착안**하여, 비전 기반의 실시간 객체 추적 시스템을 구현한 개인 프로젝트입니다.
-탐지/추적 레이더와 유도탄 발사 장치의 메커니즘을 카메라와 2축 서보모터로 재해석하여, 타겟 객체를 화면 중앙(조준선)에 지속적으로 유지하는 폐루프(Closed-loop) 자동 추적 시스템을 구축했습니다.
+## 1. 프로젝트 개요
+본 프로젝트는 단거리 지대공 유도무기인 천마의 시선지령유도 방식에서 착안하여 비전 기반의 실시간 객체 추적 시스템을 구현한 개인 프로젝트입니다.
+(시선지령유도: 탐지 및 추적 레이더가 표적을 향한 시선을 유지하는 방식)  
+탐지/추적 레이더와 유도탄 발사 장치의 메커니즘을 카메라와 2축 서보모터로 재해석하여 타겟 객체를 화면 중앙(조준선)에 지속적으로 유지하는 폐루프 자동 추적 시스템을 구축했습니다.
 
 ### 🛠️ 개발 환경 및 기술 스택
 * **OS / Middleware:** Ubuntu 22.04, ROS 2 (Humble)
 * **Language:** Python, C++ (Arduino)
-* **Hardware:** PC, Raspberry Pi 5, Arduino Mega 2560, Servo Motor(SG-90) x2, Pi Camera
+* **Hardware:** PC, Raspberry Pi 5, Arduino Mega 2560, Servo Motor (SG-90) x 2, Pi Camera
 
 ---
 
-## 2. System Architecture (이기종 분산 제어)
-단일 보드의 연산 리소스 한계를 극복하고 제어의 실시간성을 확보하기 위해, 이기종 디바이스 간 역할을 완벽히 분담한 분산 제어 아키텍처를 설계했습니다.
+## 2. System Architecture
+단일 보드의 연산 리소스 한계를 극복하고 제어의 실시간성을 확보하기 위해서 이기종 디바이스 간 역할을 완벽히 분담한 분산 제어 아키텍처를 설계했습니다.
 
 * **PC (Vision & AI):** 고해상도 영상 스트리밍 수신 및 YOLO 모델 기반 객체 인식 추론 전담.
 * **Raspberry Pi 5 (Master):** 카메라 영상 취득 및 Flask 스트리밍 서버 운용, 객체 특징 데이터(중심 좌표, 면적) 산출, 제어 오차 연산 및 ROS 2 노드 통신 총괄.
